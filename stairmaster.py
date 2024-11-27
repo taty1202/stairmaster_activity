@@ -21,8 +21,19 @@
 # 2. 1 step + 2 steps
 # 3. 2 steps + 1 step
  
-def climb_stairs(n):
-    pass
+def climb_stairs(n, memo=None):
+    memo = {} if memo is None else memo
+
+    if n in memo:
+        return memo[n]
+   
+    if n <= 3: 
+        return n
+    
+    result = climb_stairs(n-1, memo) + climb_stairs(n - 2, memo)
+    memo[n] = result
+    return result
+
 
     # at each step, how many choices do we have?
     # given each choice, how many combinations of steps are left?

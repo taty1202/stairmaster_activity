@@ -18,8 +18,8 @@ def test_30_step():
 def test_35_step():
     assert climb_stairs(35) == 14930352
 
-# def test_40_step():
-#     assert climb_stairs(40) == 165580141
+def test_40_step():
+    assert climb_stairs(40) == 165580141
 
-# def test_50_step():
-#     assert climb_stairs(50) == 20365011074
+def test_50_step():
+    assert climb_stairs(50) == 20365011074
